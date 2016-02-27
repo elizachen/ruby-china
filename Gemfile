@@ -4,8 +4,6 @@ else
   source 'https://gems.ruby-china.org'
 end
 
-ruby '2.3.0'
-
 gem 'rails', '5.0.0.beta3'
 gem 'sprockets'
 gem 'sass-rails'
@@ -21,13 +19,13 @@ gem 'pg'
 
 gem 'rack-attack'
 
-gem 'rails-i18n'
+gem 'rails-i18n', '~> 5.x'
 gem 'http_accept_language'
 gem 'rails_autolink'
 gem 'md_emoji'
 
 # OAuth Provider
-gem 'doorkeeper', '4.0.0.rc2'
+gem 'doorkeeper', '~> 4.0.0.rc3'
 gem 'doorkeeper-i18n'
 
 gem 'bulk_insert', git: 'https://github.com/huacnlee/bulk_insert.git', branch: 'fix/active-record-5-warning'
@@ -99,7 +97,7 @@ gem 'postmark'
 gem 'postmark-rails'
 
 # Dalli, kgio is for Dalli
-gem 'kgio'
+gem 'kgio', platform: :ruby
 gem 'dalli'
 
 gem 'puma'
@@ -127,7 +125,7 @@ end
 
 group :development, :test do
   gem 'rubocop', '~> 0.39.0', require: false
-  gem 'rspec-rails', '3.5.0.beta1'
+  gem 'rspec-rails', '~> 3.5.0.beta1'
   gem 'factory_girl_rails', '~> 4.5.0'
   gem 'database_cleaner'
   gem 'capybara'
@@ -137,3 +135,6 @@ group :development, :test do
   gem 'codecov', require: false
   gem 'bundler-audit', require: false
 end
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
