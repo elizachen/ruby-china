@@ -63,7 +63,7 @@ gem 'cancancan', '~> 1.13.1'
 
 # Redis
 gem 'redis'
-gem 'hiredis'
+gem 'hiredis', platform: :ruby
 gem 'redis-namespace'
 gem 'redis-objects'
 
@@ -109,7 +109,8 @@ gem 'rack-utf8_sanitizer'
 # Mini profiler
 gem 'rack-mini-profiler', require: false
 
-gem 'oneapm_rpm'
+gem 'oneapm_rpm', group: :production
+
 gem 'exception_notification'
 gem 'status-page'
 
