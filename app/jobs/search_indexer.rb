@@ -16,12 +16,14 @@ class SearchIndexer < ApplicationJob
 
     return false if !obj
 
+    unless Gem.win_platform?
     if operation == 'update'
       obj.__elasticsearch__.update_document
     elsif operation == 'delete'
       obj.__elasticsearch__.delete_document
     elsif operation == 'index'
       obj.__elasticsearch__.index_document
+    end
     end
   end
 end
