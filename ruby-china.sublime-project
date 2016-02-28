@@ -1,0 +1,19 @@
+{
+	"folders":
+	[
+		{
+			"path": ".",
+			"folder_exclude_patterns": [".bundle",".idea","tmp",".capistrano","log","tmp",
+                                  "public/assets","public/system/letter_avatars"],
+			"file_exclude_patterns": ["*.sublime-workspace",".byebug_history",
+                                "bootstrap.min.js","bootstrap-select.min.js","backbone.js","underscore.js",
+                                "bootstrap.min.css","bootstrap-select.min.css","font-awesome.min.scss"]
+		}
+	],
+    "settings":
+    {
+      "translate_tabs_to_spaces": true,
+      "trim_trailing_white_space_on_save": true,
+      "tab_size": 2
+    }
+}
