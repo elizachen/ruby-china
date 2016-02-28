@@ -1,3 +1,4 @@
+unless Gem.win_platform?
 app_root = '/home/ruby/www/ruby-china/current'
 pidfile "#{app_root}/tmp/pids/puma.pid"
 state_path "#{app_root}/tmp/pids/puma.state"
@@ -16,4 +17,5 @@ end
 
 before_fork do
   ActiveRecord::Base.connection_pool.disconnect!
+end
 end
