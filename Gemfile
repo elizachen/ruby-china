@@ -124,7 +124,7 @@ gem 'homeland-wiki'
 gem 'homeland-note'
 gem 'homeland-site'
 
-gem 'sdoc', '1.0.0.rc1'
+gem 'sdoc', '~> 1.0.0.rc2'
 
 group :development do
   gem 'derailed'
